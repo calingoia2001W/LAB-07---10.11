@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pagina profil Goia Calin-Daniel</title>
+<style>
+body { background-color: orange;}
+h1 {color: rgb(213, 23, 34);}
+h3 {color: rgb(211, 88, 21);}
+p {color: yellow;}
+
+table, tr, td, ul {border: 2.5px solid black;}
+tr:hover {background-color: yellow}
+
+h1 {font-family: "Times New Roman";
+    font-style: bold;
+	font-size: 32px;}
+p {font-family: "Arial";
+   font-style: italic;
+   font-size: 14px;}
+ h3 {font-family: "Verdana";
+     font-style: bold;
+	 font-size: 22px;
+	 }
+img {border: 2px solid black;
+     border=radius: 8px;
+	 width: 150px;
+	 display: block;
+	 padding: 1px;
+	 margin: left;
+	 opacity: 0.8;
+	 }
+li {font-family: "Verdana";
+    font-style: italic;
+	}
+</style>
+<script>
+function veziViitor()
+    {
+	document.getElementById("Profil").innerHTML = "dr. ing. Goia";
+
+	var tabelEducatie = document.getElementById("tabEducatie");
+	tabEducatie.rows[0].cells[0].innerHTML = "UTC-N";
+	tabEducatie.rows[0].cells[1].innerHTML = "2020-2024";
+	tabEducatie.rows[0].cells[2].innerHTML = "IEET";
+	tabEducatie.rows[1].cells[0].innerHTML = "Inginer";
+	tabEducatie.rows[1].cells[1].innerHTML = "2024-2026";
+	tabEducatie.rows[1].cells[2].innerHTML = "Google";
+	
+	document.getElementById("pozaProfil").src = "img2.jpg";
+	
+	document.body.style.backgroundColor = "DarkGoldenRod";
+	
+	document.getElementById("pozaProfil").style.opacity = "0.6";
+    document.getElementById("pozaProfil").style.border = "8px";	
+	}
+function artVarst()
+    {
+	var azi = new Date;
+	var varsta;
+	var year = document.getElementById("varsta").innerHTML;
+	varsta = azi.getFullYear() - parseInt(year);
+	document.getElementById("varsta").innerHTML = varsta;
+	}
+</script>
+</head>
+<body>
+<h1 id="Profil">Nume:Goia</h1>
+<h1 id="Profil">Prenume:Calin-Daniel</h1>
+<h3>Date de contact:</h3>
+<p>Email:calingoia01@yahoo.com</p>
+<p>Telefon:0751547360</p>
+<img id="pozaProfil" src="img1.jpg" width="200" height="300">
+<p onmouseover = "artVarst()" id="varsta">2001</p>
+<button onclick="veziViitor()">Alta viata</button>
+<h3 id="p">Discipline de interes:</h3>
+<ul>
+<li>Programarea calculatoarelor(AN I)</li>
+<li>CCEP(AN I)</li>
+<li>Fizica(AN I)</li>
+</ul>
+<a href="https://etti.utcluj.ro/Fd/articles/EaFd.html"> Link pentru discipline</a>
+<h3>Hobby-uri:</h3>
+<ul>
+<li>Jocuri video</li>
+<li>Fotbal</li>
+<li>Pescuit</li>
+</ul>
+<table id="tabEducatie">
+<tr><td>UTC-N</td><td>2020-prezent</td><td>student</td></tr>
+<tr><td>Liceul Dr."Lazar Chirila"</td><td>2016-2020</td><td>elev</td></tr>
+</table>
+</body>
+</html>
